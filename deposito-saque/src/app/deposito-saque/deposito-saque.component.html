@@ -1,7 +1,7 @@
 <h2>Manage your money here.</h2>
-<h3>Account funds: </h3>
+<h3>Account funds: {{accountFunds}}</h3>
 
-<input type="text" id="currencyInput">
-<button id="depositBtn">Deposit</button>  
-<button id="withdrawBtn">Withdraw</button>
+<input type="number" id="currencyInput">
+<button id="depositBtn" (click)="deposit()">Deposit</button>  
+<button id="withdrawBtn" (click)="withdraw()">Withdraw</button>
 
