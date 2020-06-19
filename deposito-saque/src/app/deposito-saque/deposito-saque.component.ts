@@ -31,6 +31,5 @@ export class DepositoSaqueComponent implements OnInit {
       else {
         alert("Not enough funds.");
       }
-
   }
 }
