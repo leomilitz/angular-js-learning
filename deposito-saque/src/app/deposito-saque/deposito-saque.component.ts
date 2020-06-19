@@ -17,14 +17,15 @@ export class DepositoSaqueComponent implements OnInit {
     var depInput = <HTMLInputElement> document.getElementById("currencyInput");
     var depositValue = parseFloat(depInput.value);
 
-    this.accountFunds += depositValue;
+    if (depositValue > 0)
+      this.accountFunds += depositValue;
   }
   
   withdraw() {
       var depInput = <HTMLInputElement> document.getElementById("currencyInput");
       var withdrawValue = parseFloat(depInput.value);
 
-      if (withdrawValue <= this.accountFunds) {
+      if (withdrawValue <= this.accountFunds && withdrawValue > 0) {
         this.accountFunds -= withdrawValue;
       }
       else {
